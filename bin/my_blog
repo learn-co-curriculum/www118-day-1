@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require_relative "../config/environment"
+
+puts "Welcome to My Blog"
+
+["First","Second","Third"].each do |i|
+  p = Post.new
+  p.title = i
+  p.save
+end
+
+Post.print_titles
