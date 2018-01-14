@@ -12,7 +12,7 @@ puts "Welcome to My Blog"
 # 3. Exit
 
 # $ 2
-# m = MagazineScraper.new_from_file("/Users/avi/Desktop/learn-magazine.html")
+# m = MagazineScraper.new_from_file("../learn-magazine.html")
 # m.import_html
 
 m = MagazineScraper.new_from_json("https://learn.co/magazine/blog-posts?page=1&page_size=104")
