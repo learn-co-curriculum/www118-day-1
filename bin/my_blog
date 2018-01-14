@@ -4,10 +4,17 @@ require_relative "../config/environment"
 
 puts "Welcome to My Blog"
 
-["First","Second","Third"].each do |i|
-  p = Post.new
-  p.title = i
-  p.save
-end
+# Welcome to My Blog!
 
-Post.print_titles
+# Menu:
+# 1. Write a Post
+# 2. List all Posts
+# 3. Exit
+
+# $ 2
+# m = MagazineScraper.new_from_file("/Users/avi/Desktop/learn-magazine.html")
+# m.import_html
+
+m = MagazineScraper.new_from_json("https://learn.co/magazine/blog-posts?page=1&page_size=104")
+
+BlogController.new.start
